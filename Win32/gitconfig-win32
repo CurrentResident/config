@@ -1,0 +1,16 @@
+[user]
+	name = Jim Thoenen
+	email = jthoenen@gmail.com
+[core]
+	editor = gvim -f
+[diff]
+	tool = bc3
+[difftool "bc3"]
+[alias]
+	st = status
+	dt = difftool --dir-diff
+	dtc = difftool --dir-diff --cached
+	dts = difftool --dir-diff --cached
+	k = !gitk --all &
+[difftool "bc3"]
+	cmd = \"D:/Program Files (x86)/Beyond Compare 3/BCompare.exe\" -solo -expandall \"$LOCAL\" \"$REMOTE\"

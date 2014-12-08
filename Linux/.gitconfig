@@ -3,9 +3,7 @@
 	email = jthoenen@gmail.com
 [core]
 	editor = gvim -f
-[diff]
-	tool = bc3
-[difftool "bc3"]
+	autocrlf = false
 [alias]
 	st = status
 	dt = difftool --dir-diff
@@ -13,5 +11,7 @@
 	dts = difftool --dir-diff --cached
 	k = !gitk --all &
 	co = checkout
-[difftool "bc3"]
-	cmd = \"D:/Program Files (x86)/Beyond Compare 3/BCompare.exe\" -solo -expandall \"$LOCAL\" \"$REMOTE\"
+[diff]
+	tool = meld
+[merge]
+	tool = meld

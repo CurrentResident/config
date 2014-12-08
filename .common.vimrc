@@ -19,3 +19,6 @@ colorscheme darkblue
 set nobackup
 
 behave mswin
+
+highlight TabChars guibg=DarkSlateBlue ctermbg=239
+match TabChars /\t/

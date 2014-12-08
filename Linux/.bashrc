@@ -17,6 +17,19 @@ if [ -f $HOME/git-prompt.sh ]; then
     export PS1='[\u@\h \W'$Green'$(__git_ps1 " (%s)")'$Color_Off']\$ '
 fi
 
+if [ -f $HOME/autostart-ssh-agent.sh ]; then
+    source $HOME/autostart-ssh-agent.sh
+fi
+
+if [ -d /usr/local/boost ]; then
+    export BOOST_DIR=/usr/local/boost
+    export PATH=$BOOST_DIR/bin:$PATH
+fi
+
+if [ -d $HOME/bin ]; then
+    export PATH=$HOME/bin:$PATH
+fi
+
 #    env LESS_TERMCAP_mb=$'\E[01;31m' \
 #    LESS_TERMCAP_md=$'\E[01;38;5;74m' \
 #    LESS_TERMCAP_me=$'\E[0m' \

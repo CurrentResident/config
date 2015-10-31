@@ -1,0 +1,29 @@
+OpaqueMoveSize unlimited
+DesktopSize 1x1
+
+Style * MouseFocus, ResizeOpaque, DecorateTransient
+
+AddToMenu GvimSpecials 
+    + "Gracefully terminate all"    All (gvim) FakeKeypress press Escape \
+                                                            press colon \
+                                                            press q \
+                                                            press Return
+
+AddToMenu DoSomething "Do Something!" Title
+    + Xterm          Exec xterm
+    + Xfe            Exec xfe
+    + Gvim           Exec gvim
+    + "Gvim actions" Popup GvimSpecials
+    + ""             Nop
+    + Lock           Exec xlock
+    + ""             Nop
+    + "Restart FVWM" Restart
+    + ""             Nop
+    + "Quit FVWM"    Quit
+
+Mouse 3 R N PopUp DoSomething
+
+Mouse 1 W M RaiseLower
+Mouse 2 W M Move
+Mouse 3 W M Resize
+

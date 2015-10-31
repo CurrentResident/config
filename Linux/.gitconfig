@@ -15,3 +15,5 @@
 	tool = meld
 [merge]
 	tool = meld
+[color]
+	ui = auto

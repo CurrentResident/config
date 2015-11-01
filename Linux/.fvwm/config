@@ -1,7 +1,17 @@
+
+ImagePath $HOME/pixmaps:$HOME/pixmaps;.png
+
 OpaqueMoveSize unlimited
 DesktopSize 1x1
 
+ButtonStyle 0 Pixmap 18X.png
+#ButtonStyle 0 Pixmap Bang1.png
+
 Style * MouseFocus, ResizeOpaque, DecorateTransient
+Style * Button 0, !Button 2, !Button 4, !Button 6, !Button 8
+#Style * Font -*-clean-medium-r-*-*-16-*-*-*-*-*-*-*
+#Style * Font -*-fixed-medium-r-*-*-18-*-*-*-*-*-*-*
+Style * Font "xft:Terminus-8"
 
 AddToMenu GvimSpecials 
     + "Gracefully terminate all"    All (gvim) FakeKeypress press Escape \
@@ -21,9 +31,15 @@ AddToMenu DoSomething "Do Something!" Title
     + ""             Nop
     + "Quit FVWM"    Quit
 
-Mouse 3 R N PopUp DoSomething
+Mouse 3 R N  Menu DoSomething
+Mouse 3 R N2 Menu DoSomething
 
-Mouse 1 W M RaiseLower
-Mouse 2 W M Move
-Mouse 3 W M Resize
+Mouse 1 W M  RaiseLower
+Mouse 1 W M2 RaiseLower
+Mouse 2 W M  Move
+Mouse 2 W M2 Move
+Mouse 3 W M  Resize
+Mouse 3 W M2 Resize
+
+Mouse 1 0 A Close
 

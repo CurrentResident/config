@@ -14,7 +14,8 @@ set columns=120
 set lines=50
 syntax enable
 set background=dark
-colorscheme darkblue
+"colorscheme darkblue
+colorscheme tender
 
 set nobackup
 

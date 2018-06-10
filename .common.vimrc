@@ -15,6 +15,7 @@ set lines=50
 syntax enable
 set background=dark
 "colorscheme darkblue
+"colorscheme lucario
 colorscheme tender
 
 set nobackup
@@ -23,3 +24,8 @@ behave mswin
 
 highlight TabChars guibg=DarkSlateBlue ctermbg=239
 match TabChars /\t/
+
+highlight TrailingWhitespace guibg=#40AAAA ctermbg=Gray
+2match TrailingWhitespace /\s\+$/
+
+nmap <C-W> :%s/\s\+$//<CR>

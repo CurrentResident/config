@@ -23,9 +23,9 @@ set nobackup
 behave mswin
 
 highlight TabChars guibg=DarkSlateBlue ctermbg=239
-match TabChars /\t/
+let tabMatch = matchadd("TabChars", "\\t")
 
 highlight TrailingWhitespace guibg=#40AAAA ctermbg=Gray
-2match TrailingWhitespace /\s\+$/
+let twsMatch = matchadd("TrailingWhitespace", "\\s\\+$")
 
 nmap <C-W> :%s/\s\+$//<CR>

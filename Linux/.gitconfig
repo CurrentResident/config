@@ -12,8 +12,10 @@
 	k = !gitk --all &
 	co = checkout
 [diff]
-	tool = meld
+	tool = bc3
 [merge]
 	tool = meld
 [color]
 	ui = auto
+[difftool "bc3"]
+	trustExitCode = true

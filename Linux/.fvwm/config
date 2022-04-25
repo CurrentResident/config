@@ -34,12 +34,28 @@ AddToMenu DoSomething "Do Something!" Title
 Mouse 3 R N  Menu DoSomething
 Mouse 3 R N2 Menu DoSomething
 
-Mouse 1 W M  RaiseLower
-Mouse 1 W M2 RaiseLower
-Mouse 2 W M  Move
-Mouse 2 W M2 Move
-Mouse 3 W M  Resize
-Mouse 3 W M2 Resize
+# The following function is swiped from the FVWM docs.
+# Function: MoveClickX $0 $1 $2
+#   $0 - Action on Mouse Hold + Move
+#   $1 - Action on Mouse Click
+#   $2 - Action on Mouse DoubleClick
+#  Example: Mouse 1 T A MoveClickX Move Raise Maximize
+DestroyFunc MoveClickX
+AddToFunc MoveClickX
++ M $0
++ C $1
++ D $2
+
+Mouse 1 W M  MoveClickX Nop RaiseLower Maximize
+Mouse 1 W M2 MoveClickX Nop RaiseLower Maximize
+Mouse 2 W M  MoveClickX Move Nop Nop
+Mouse 2 W M2 MoveClickX Move Nop Nop
+#Mouse 2 W M  Move
+#Mouse 2 W M2 Move
+Mouse 3 W M  MoveClickX Resize Nop Nop
+Mouse 3 W M2 MoveClickX Resize Nop Nop
+#Mouse 3 W M  Resize
+#Mouse 3 W M2 Resize
 
 Mouse 1 0 A Close
 

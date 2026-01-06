@@ -1,6 +1,6 @@
 [user]
 	name = Jim Thoenen
-	email = jthoenen@gmail.com
+	email = jjt@pobox.com
 [core]
 	editor = gvim -f
 	autocrlf = false

@@ -1,4 +1,4 @@
-source /usr/share/vim/vim74/mswin.vim
+source $VIMRUNTIME/mswin.vim
 
 source $HOME/.common.vimrc
 
